@@ -25,6 +25,16 @@ strcpy(char *s, const char *t)
   return os;
 }
 
+char* strcat(char *d, const char *s)
+{
+  char *od;
+
+  od = d;
+  d += strlen(d);
+  strcpy(d, s);
+  return od;
+}
+
 int
 strcmp(const char *p, const char *q)
 {
